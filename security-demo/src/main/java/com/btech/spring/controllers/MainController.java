@@ -8,11 +8,11 @@ public class MainController {
 
 	@GetMapping(value="/")
 	public String home() {
-		return "Hello";
+		return "Public Section";
 	}
 	
 	@GetMapping(value="/private")
 	public String privateArea() {
-		return "Private";
+		return "Private Section - Access token is OK";
 	}
 }
