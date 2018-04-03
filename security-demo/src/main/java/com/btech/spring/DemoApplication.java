@@ -13,7 +13,6 @@ import com.btech.spring.entities.User;
 import com.btech.spring.repositories.UserRepository;
 
 @SpringBootApplication
-@EnableOAuth2Sso
 public class DemoApplication {
 
 	public static void main(String[] args) {
