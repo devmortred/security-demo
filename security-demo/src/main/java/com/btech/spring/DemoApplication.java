@@ -20,8 +20,10 @@ public class DemoApplication {
 
 	@Autowired
 	public void authenticationManager(AuthenticationManagerBuilder builder, UserRepository repo) throws Exception {
-		if(repo.count() == 0)
+		if(repo.count() == 0) {
 			repo.save(new User("user", "user", Arrays.asList(new Role("USER"), new Role("ACTUATOR"))));
+			repo.save(new User("admin", "admin", Arrays.asList(new Role("USER"), new Role("ACTUATOR"))));
+		}
 		builder.userDetailsService (s -> new CustomUserDetails(repo.findByUsername(s)));
 	}
 }
