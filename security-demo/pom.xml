@@ -39,8 +39,8 @@
 			<artifactId>spring-security-oauth2</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+    		<groupId>org.springframework.social</groupId>
+    		<artifactId>spring-social-facebook</artifactId>
 		</dependency>
 	</dependencies>
 
